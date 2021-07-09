@@ -18,6 +18,30 @@ npm start
 
 Then open http://localhost:3000/ to see the app.
 
+## ESLint
+
+```sh
+# checking
+npm run lint
+
+# auto fix
+npm run lint:fix
+```
+
+Note: Target for .js, jsx files.
+
+## Prettier
+
+```sh
+# checking
+npm run format
+
+# auto fix
+npm run format:fix
+```
+
+Note: Target for .html, .css, .json, .md files.
+
 ## Demo
 
 TODO
