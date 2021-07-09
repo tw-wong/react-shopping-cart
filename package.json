@@ -35,6 +35,21 @@
       "prettier --write"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint . --fix",
+      "git add"
+    ],
+    "src/**/*.{html,css,md,json}": [
+      "prettier --write",
+      "git add"
+    ]    
+  },
   "browserslist": {
     "production": [
       ">0.2%",
