@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import ShoppingCart from './components/ShoppingCart'
-
+// Test 123
 const Home = () => {
   const config = {
     currency: 'RM',
