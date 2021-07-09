@@ -28,11 +28,13 @@
     }
   },
   "lint-staged": {
-    "src/**/*.+(js|jsx)": [
-      "npm run lint -- --fix"
+    "src/**/*.{js,jsx}": [
+      "eslint . --fix",
+      "git add"
     ],
-    "src/**/*.+(html|css|md|json)": [
-      "prettier --write"
+    "src/**/*.{html,css,md,json}": [
+      "prettier --write",
+      "git add"
     ]    
   },
   "browserslist": {
