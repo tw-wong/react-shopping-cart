@@ -1,9 +1,9 @@
 // import logo from './logo.svg';
-import './App.css';
+import './App.css'
 
 // import {useState, useEffect } from 'react';
 // import ShoppingCart from './components/ShoppingCart';
-import Home from './Home';
+import Home from './Home'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Home />
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

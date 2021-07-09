@@ -1,5 +1,5 @@
-import {useState, useEffect} from 'react';
-import CartItem from '../components/CartItem';
+// import { useState, useEffect } from 'react'
+import CartItem from '../components/CartItem'
 
 const ShoppingCart = (props) => {
   // const [isCheckedAll, setIsCheckedAll] = useState(false);
@@ -11,7 +11,7 @@ const ShoppingCart = (props) => {
 
   // }, [props.products]);
 
-  const checked = props.isCheckedAll ? 'checked' : '';
+  const checked = props.isCheckedAll ? 'checked' : ''
   // console.log('checked: %s, props.isCheckedAll:%s', checked, props.isCheckedAll)
 
   return (
@@ -20,33 +20,41 @@ const ShoppingCart = (props) => {
         <thead className="thead-dark">
           <tr>
             <th scope="col">
-              {<input
-                type="checkbox"
-                checked={checked}
-                onChange={e => props.checkAllItem(e.target.checked)}/>}
+              {
+                <input
+                  type="checkbox"
+                  checked={checked}
+                  onChange={(e) => props.checkAllItem(e.target.checked)}
+                />
+              }
             </th>
             <th scope="col">Product</th>
             <th scope="col">Price</th>
             <th scope="col">Quantity</th>
             <th scope="col">Subtotal</th>
             <th scope="col">Action</th>
-        </tr>
+          </tr>
         </thead>
         <tbody>
           {props.products.map((item, index) => {
-            return !item.is_deleted && <CartItem
-              key={index}
-              index={index}
-              config={props.config}
-              updateProductQuantity={props.updateProductQuantity}
-              deleteProduct={props.deleteProduct}
-              checkItem={props.checkItem}
-              item={item} />
+            return (
+              !item.is_deleted && (
+                <CartItem
+                  key={index}
+                  index={index}
+                  config={props.config}
+                  updateProductQuantity={props.updateProductQuantity}
+                  deleteProduct={props.deleteProduct}
+                  checkItem={props.checkItem}
+                  item={item}
+                />
+              )
+            )
           })}
         </tbody>
       </table>
     </div>
-  );
+  )
 }
 
-export default ShoppingCart;
+export default ShoppingCart
