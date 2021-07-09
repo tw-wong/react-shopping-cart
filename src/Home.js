@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import ShoppingCart from './components/ShoppingCart'
 
-//Test lint-staged for ESLint
+//Test lint-staged for ESLint 2
 const Home = () => {
   const config = {
     currency: 'RM',
