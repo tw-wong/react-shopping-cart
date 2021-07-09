@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import ShoppingCart from './components/ShoppingCart'
 
+// let a = {};
 // Test lint-staged for ESLint 81
 const Home = () => {
   const config = {
