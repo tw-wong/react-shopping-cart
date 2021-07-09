@@ -19,7 +19,21 @@
     "lint": "eslint ./ --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --check \"src/**/*.+(html|css|md|json)\"",
-    "format:fix": "prettier --write \"src/**/*.+(html|css|md|json)\""
+    "format:fix": "prettier --write \"src/**/*.+(html|css|md|json)\"",
+    "pre-commit": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.+(js|jsx)": [
+      "npm run lint -- --fix"
+    ],
+    "src/**/*.+(html|css|md|json)": [
+      "prettier --write"
+    ]    
   },
   "browserslist": {
     "production": [
@@ -38,6 +52,8 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.0",
     "prettier": "^2.3.2"
   }
 }
