@@ -1,13 +1,23 @@
 {
-    // "files.trimTrailingWhitespace": true,
-    // "editor.detectIndentation": false,
-    // "editor.tabSize": 2,
-    "editor.formatOnSave": true,
-    "[javascript]": {
-      "editor.formatOnSave": false,
-    },
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-    },
-    "eslint.alwaysShowStatus": true
+  // "files.trimTrailingWhitespace": true,
+  // "editor.detectIndentation": false,
+  // "editor.tabSize": 2,
+  "files.associations": {
+    "*.js": "javascript",
+    "*.jsx": "javascript"
+  },
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false,
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
